@@ -1662,36 +1662,7 @@
             font-size: 1em
         }
     </style>
-    <script>
-
-        var bonusClosedd = false;
-        var ptrcl = document.location.protocol + "";
-        if (ptrcl == 'index.html') {
-            document.location.href = "index.html";
-        }
-        var waNo = "";
-        $(document).ready(function () {
-
-            var data = { sid: 15 };
-            $.ajax({
-                url: "https://panels777.com:2087/getWaNo",
-                type: "POST",
-                data: data,
-                dataType: "json",
-                success: function (ret) {
-                    if (ret.waNo) {
-                        waNo = ret.waNo;
-                        $('#canliDestek2').attr('href', "https://wa.me/" + waNo + "?text=Necə ödəniş edə bilərəm?");
-                        $('#canliDestek').attr('href', "https://wa.me/" + waNo + "?text=Necə ödəniş edə bilərəm?");
-                        $('#nomre').text(waNo);
-                    }
-                },
-                error: function () {
-                    console.log("Err:", err);
-                }
-            });
-        });
-    </script>
+    
 
     <style>
         .css-3d-text {
